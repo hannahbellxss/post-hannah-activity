@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { getPost, storePost } from '../../api/post';
 import PostCard from './PostCard';
+import './styles/post.css';
+
 
 export default function Post() {
     const [posts, setPosts] = useState([]);
