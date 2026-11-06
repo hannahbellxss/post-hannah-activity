@@ -2,6 +2,8 @@
 import { useState } from "react";
 import Card from "./component/ui/Card";
 import Form from "./component/ui/Form";
+import PostCard from "./component/ui/PostCard";
+import Post from "./component/ui/Post";
 
 
 function App() {
@@ -44,6 +46,7 @@ function App() {
           <li key={index}>{user}</li>
         ))}
       </ul>
+            <Post />
     </>
   );
 }
