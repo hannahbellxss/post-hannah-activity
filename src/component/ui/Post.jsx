@@ -10,11 +10,12 @@ export default function Post() {
     const [error, setError] = useState('');
     const [processing, setProcessing] = useState(false);
 
-    useEffect(() => {
+     useEffect(() => {
         const fetchPosts = async () => {
             try {
                 const response = await getPost();
-                setPosts(response.data.data || response.data);
+                const data = response.data.data || response.data;
+                setPosts([...data].sort((a, b) => new Date(b.created_at) - new Date(a.created_at)));
             } catch (err) {
                 console.error("Failed to load posts", err);
             }
