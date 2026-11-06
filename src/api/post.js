@@ -1,6 +1,6 @@
 import api from './axios';
 
-export const getPpost = () =>  {
+export const getPost = () =>  {
     return api.get('/posts');
 };
 
