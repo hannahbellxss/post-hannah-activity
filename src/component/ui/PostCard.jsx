@@ -11,7 +11,7 @@ export default function PostCard({ post }) {
                     </span>
 
                     <small className="post-timestamp">
-                        {post.created_at ? new Date(post.created_at).toLocaleString() : 'Just now'}
+                        {formattedDate}
                     </small>
                 </div>
 
